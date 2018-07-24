@@ -1,28 +1,51 @@
 import * as React from 'react'
-import store from '../store'
 import { connect } from 'react-redux';
+
 import PictureContainer from './PictureContainer'
-import UserBioContainer from './UserBioContainer'
-import users from '../users/users-hardcoded'
+import ProfileBioContainer from './ProfileBioContainer'
+import * as userActions from '../actions/user-actions'
 
+class SelectorContainer extends React.PureComponent{
 
+  componentDidMount(){
+    if(this.props.currentUser.Pic === null ){
+      }
 
-export default class SelectorContainer extends React.PureComponent{
+  }
 
-  state =  { 
-    user : users[Math.floor(Math.random()*users.length -1)]
+   onClickHandler = (event) => {
+    if(event.target.id === 'no'){
+       this.props.swipeLeft(this.props.shownProfileId)
+    }else{
+      this.props.swipeRight(this.props.shownProfileId)
+    }
   }
 
   render(){
-    // console.log(this.state)
     return (
       <div className="selector-container">
         <p>I'm the gamePage container</p>
-        <button className="selector-container-button-no">No</button>
-        <PictureContainer user = {this.state.user} />
-        <button className="selector-container-button-yes">Yes</button>
-        <UserBioContainer user = {this.state.user} />
+        <button className="selector-container-button-no" onClick={this.onClickHandler} id="no"  >No</button>
+        <PictureContainer user = { this.props.currentUser && this.props.currentUser} />
+        <button className="selector-container-button-yes" onClick={this.onClickHandler} id="yes" >Yes</button>
+        <ProfileBioContainer user = {this.props.currentUser &&this.props.currentUser} />
       </div>
     )
   }
 }
+
+const mapStateToProps =  (state) =>{
+  return {
+  users : state.users,
+  currentUser : state.currentUser,
+  shownProfileId : state.shownProfile
+  }
+}
+
+const mapDispatchToProps = {
+    swipeLeft : userActions.swipeLeft,
+    swipeRight : userActions.swipeRight,
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SelectorContainer)
