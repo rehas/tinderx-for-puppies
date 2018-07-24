@@ -6,10 +6,10 @@ export default function UserTypePage(props){
     <div className='user-type-page'>
       <h1>Are you a dog or a walker?</h1>
       <div className='user-type-page-dog'>
-        <Link to={`/props.user/selector`} onClick={()=>{props.filer_users('dog')}}>Dog</Link>
+        <Link to={`/:userId/selector`} onClick={()=>{props.filer_users('dog')}}>Dog</Link>
       </div>
       <div className='user-type-page-walker'>
-        <Link to={`/props.user/selector`} onClick={()=>{props.filer_users('walker')}}>Walker</Link>
+        <Link to={`/:userId/selector`} onClick={()=>{props.filer_users('walker')}}>Walker</Link>
       </div>
     </div>
   )

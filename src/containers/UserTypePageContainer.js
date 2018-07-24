@@ -5,7 +5,7 @@ import UserTypePresenter from '../presenters/UserTypePresenter';
 class UserTypePresenterContainer extends PureComponent{
   render(){
     return(
-    <UserTypePresenter user={1} filer_users={(userType)=>console.log(userType)}/>
+    <UserTypePresenter filer_users={(userType)=>console.log(userType)}/>
     )
   }
 }
