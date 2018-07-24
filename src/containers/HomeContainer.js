@@ -11,11 +11,6 @@ class HomeContainer extends PureComponent {
   }
 }
 
-function handleSubmit(event) {
-  const nb = event.target.elements["userId"].value;
-  props.setCurrentUser(parseInt(nb));
-  event.preventDefault()
-}
 
 const mapStateToProps = (state) => {
   return {
