@@ -7,15 +7,13 @@ export default function UserTypePage(props) {
       <h1>Tinderx for Puppies</h1>
 
       <div className='home-presenter-login'>
-        <form onSubmit={function (event) {
-          const nb = event.target.elements["userId"].value;
-          props.setCurrentUser(parseInt(nb));
-          event.preventDefault()
-        }}>
+        
+        <form onSubmit={(event) => {handleEvent(event, props.setCurrentUser)}}>
         <legend>Login</legend>
           <input type="number" name="userId" id="userId"></input>
           <label for="userId">User ID</label>
         </form>
+        <Link to={`/${parseInt(props.userId)}/selector`}>GO!</Link>
       </div>
       <div className='home-presenter-sign-up'>
       <form onSubmit={function (event) {
@@ -37,4 +35,11 @@ export default function UserTypePage(props) {
       </div>
     </div>
   )
+}
+
+function handleEvent (event, setCurrentUserFunction) {
+  const nb = event.target.elements["userId"].value;
+  setCurrentUserFunction(parseInt(nb));
+  event.preventDefault();
+  
 }
