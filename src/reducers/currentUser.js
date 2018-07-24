@@ -1,5 +1,5 @@
 import users from '../users/users-hardcoded'
-import {SELECT_USER, } from '../actions/user-actions'
+import {SELECT_USER } from '../actions/user-actions'
 
 const initialState = users[0]
 

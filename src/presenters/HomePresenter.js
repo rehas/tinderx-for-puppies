@@ -1,15 +1,23 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-export default function UserTypePage(props){
-  return(
-    <div className='user-type-page'>
-      <h1>Are you a dog or a walker?</h1>
-      <div className='user-type-page-dog'>
-        <Link to={`/${props.userId}/selector`} onClick={()=>{props.filer_users('dog')}}>Dog</Link>
+export default function UserTypePage(props) {
+  return (
+    <div className='home-presenter'>
+      <h1>Tinderx for Puppies</h1>
+
+      <div className='home-presenter-login'>
+        <h2>Login</h2>
+        <form onSubmit={function (event) {
+          const nb = event.target.elements["userId"].value;
+          props.setCurrentUser(parseInt(nb));
+          event.preventDefault()
+        }}>
+          <input type="number" name="userId" ></input>
+        </form>
       </div>
-      <div className='user-type-page-walker'>
-        <Link to={`/${props.userId}/selector`} onClick={()=>{props.filer_users('walker')}}>Walker</Link>
+      <div className='home-presenter-sign-up'>
+
       </div>
     </div>
   )
