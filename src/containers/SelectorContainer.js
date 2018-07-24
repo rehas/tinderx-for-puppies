@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PictureContainer from './PictureContainer'
 import ProfileBioContainer from './ProfileBioContainer'
 import * as userActions from '../actions/user-actions'
+import {showNewProfile} from '../actions/profile-actions'
 
 class SelectorContainer extends React.PureComponent{
 
@@ -16,8 +17,11 @@ class SelectorContainer extends React.PureComponent{
    onClickHandler = (event) => {
     if(event.target.id === 'no'){
        this.props.swipeLeft(this.props.shownProfileId)
+       this.props.showNewProfile(this.props.currentUser.Id, this.props.shownProfileId)
+
     }else{
       this.props.swipeRight(this.props.shownProfileId)
+      this.props.showNewProfile(this.props.currentUser.Id, this.props.shownProfileId)
     }
   }
 
@@ -45,6 +49,7 @@ const mapStateToProps =  (state) =>{
 const mapDispatchToProps = {
     swipeLeft : userActions.swipeLeft,
     swipeRight : userActions.swipeRight,
+    showNewProfile : showNewProfile
 
 }
 
