@@ -1,31 +1,20 @@
 import * as React from 'react'
 import request from 'superagent'
+import {setProfileUrl} from '../actions/setProfileUrl'
+import { connect } from 'react-redux';
 
 
-export default class PhotoPageContainer extends React.PureComponent{
 
-  componentDidMount(){
-
-    if(this.props.user.userPic === null ){
-      request('https://dog.ceo/api/breeds/image/random')
-        .then(response => {
-          // we need some dispatcher function!
-          console.log(response.body)
-        })
-      }
-
-      // this.props.user.userpic = 
-        
-    }
-
-  
-
+class PhotoPageContainer extends React.PureComponent{
 
   render(){
+    console.log(this.props.user.Pic)
     return (
       <div className="photo-page-container">
-        {/* <img className="selector-container-image" src={this.props.user.Pic} alt=""/> */}
+        <img className="selector-container-image" src={this.props.user.Pic} alt=""/>
       </div>
     )
   }
 }
+
+export default connect(null, {setProfileUrl})(PhotoPageContainer)
