@@ -1,19 +1,21 @@
-import React, {PureComponent} from 'react';
-import {connect} from 'react-redux';
-import HomePage from '../presenters/HomePage';
+import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
+import HomePresenter from '../presenters/HomePresenter';
+import { setCurrentUser } from '../actions/user-actions'
 
-class HomePageContainer extends PureComponent{
-  render(){
-    return(
-    <HomePage userId={this.props.userId} filer_users={(userType)=>console.log(userType)}/>
+class HomeContainer extends PureComponent {
+  render() {
+    return (
+      <HomePresenter userId={this.props.userId} setCurrentUser={this.props.setCurrentUser} url={this.props} />
     )
   }
 }
 
+
 const mapStateToProps = (state) => {
-  return{
+  return {
     userId: state.currentUser.Id
   }
 }
 
-export default connect(mapStateToProps)(HomePageContainer)
+export default connect(mapStateToProps, { setCurrentUser })(HomeContainer)
