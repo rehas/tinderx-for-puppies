@@ -13,6 +13,4 @@ export default function UserTypePage(props){
       </div>
     </div>
   )
-
 }
-
