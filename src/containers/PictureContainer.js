@@ -24,7 +24,7 @@ export default class PhotoPageContainer extends React.PureComponent{
   render(){
     return (
       <div className="photo-page-container">
-        <img className="selector-container-image" src={this.props.user.userPic} alt=""/>
+        {/* <img className="selector-container-image" src={this.props.user.Pic} alt=""/> */}
       </div>
     )
   }

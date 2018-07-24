@@ -3,7 +3,7 @@ import store from '../store'
 import { connect } from 'react-redux';
 import PictureContainer from './PictureContainer'
 import UserBioContainer from './UserBioContainer'
-import {users} from '../users/users-hardcoded'
+import users from '../users/users-hardcoded'
 
 
 
@@ -14,7 +14,7 @@ export default class SelectorContainer extends React.PureComponent{
   }
 
   render(){
-    console.log(this.state.user)
+    // console.log(this.state)
     return (
       <div className="selector-container">
         <p>I'm the gamePage container</p>
