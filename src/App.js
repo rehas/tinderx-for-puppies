@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import {Route} from 'react-router-dom'
 import SelectorContainer from './containers/SelectorContainer';
-import UserTypePageContainer from './containers/UserTypePageContainer'
+import UserTypeContainer from './containers/UserTypeContainer'
 
 
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
         </header>
         <main>
           <Route exact path = '/:id/selector' component ={SelectorContainer}  />
-          <Route exact path = '/user-types' component ={UserTypePageContainer}  />
+          <Route exact path = '/user-types' component ={UserTypeContainer}  />
         </main>
       </div>
     );
