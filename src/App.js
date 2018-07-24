@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Route} from 'react-router-dom'
+import SelectorContainer from './containers/SelectorContainer';
 
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <SelectorContainer/>
       </div>
     );
   }
