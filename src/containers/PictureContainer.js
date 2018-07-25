@@ -8,7 +8,6 @@ import { connect } from 'react-redux';
 class PhotoPageContainer extends React.PureComponent{
 
   render(){
-    console.log(this.props.user.Pic)
     return (
       <div className="photo-page-container">
         <img className="selector-container-image" src={this.props.user.Pic} alt=""/>

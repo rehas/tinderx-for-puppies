@@ -30,9 +30,15 @@ class SelectorContainer extends React.PureComponent{
       <div className="selector-container">
         <p>I'm the gamePage container</p>
         <button className="selector-container-button-no" onClick={this.onClickHandler} id="no"  >No</button>
-        <PictureContainer user = { this.props.currentUser && this.props.currentUser} />
+        <PictureContainer 
+          user = { this.props.users.filter(x=>x.Id === this.props.shownProfileId).length 
+            && 
+          this.props.users.filter(x=>x.Id === this.props.shownProfileId)[0]} />
         <button className="selector-container-button-yes" onClick={this.onClickHandler} id="yes" >Yes</button>
-        <ProfileBioContainer user = {this.props.currentUser &&this.props.currentUser} />
+        <ProfileBioContainer 
+          user = {this.props.shownProfileId 
+            &&
+          this.props.users.filter(x=> x.Id === this.props.shownProfileId)[0]} />
       </div>
     )
   }
