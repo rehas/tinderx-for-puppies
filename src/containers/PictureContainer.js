@@ -10,7 +10,7 @@ class PhotoPageContainer extends React.PureComponent{
   render(){
     return (
       <div className="photo-page-container h-40 d-inline-block">
-        <img className="selector-container-image" src={this.props.user.Pic} alt=""/>
+        <img className="selector-container-image img-fluid" src={this.props.user.Pic} alt=""/>
       </div>
     )
   }
