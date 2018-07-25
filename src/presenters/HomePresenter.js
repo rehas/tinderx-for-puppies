@@ -5,23 +5,18 @@ export default function HomePresenter(props) {
   return (
     <div className='home-presenter'>
       
-      <h1>PET PALs!</h1>
+      <h1>PET PALS!</h1>
 
       <div className='home-presenter-login'>
         
-        <form onSubmit={(event) => {
-          event.preventDefault();
-          props.handleEvent(event, props.setCurrentUser);
-          //props.url.match.path = `/${parseInt(props.userId)}/selector`;
-          }}>
+        <form name="submitMe" onSubmit={(event) => {event.preventDefault()}}>
           <legend>Login</legend>
-          <input type="number" name="userId" id="userId" ></input>
-            <label htmlFor="userId">Name</label>
-          {/* <input type="password" name="userPassword" id="userPassword"></input>
-            <label>Password</label> */}
+          <input type="email" name="userEmail" id="userEmail" onChange={props.handleChange}></input>
+            <label htmlFor="userEmail">Email</label>
+          <input type="password" name="userPassword" id="userPassword" onChange={props.handleChange}></input>
+            <label htmlFor="userPassword">Password</label>
+          <Link to={`/${parseInt(props.currentUser, 10)}/selector`}><button onClick={() => props.handleEvent()}>Submit</button></Link>
         </form>
-
-        <Link to={`/${parseInt(props.currentUser, 10)}/selector`}><button>Submit</button></Link>
         
       </div>
 
