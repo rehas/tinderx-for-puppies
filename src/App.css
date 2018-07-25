@@ -1,9 +1,12 @@
 .App {
   text-align: center;
 }
-/* html,body, .App, #root, main, .row{
+html,body, .App, #root, main,  .selector-container{
   height: 100%;
-} */
+}
+.row{
+  height: 90%;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -34,5 +37,16 @@
 }
 
 .photo-page-container{
-  display: inline;
+  /* display: inline; */
+  /* display: flex; */
+  margin:auto;
+  width: 90%;
+}
+.selector-container-image{
+  width: 100%;
+  margin: 20px auto;
+}
+.user-bio-container{
+  font-size: 2em;
+
 }

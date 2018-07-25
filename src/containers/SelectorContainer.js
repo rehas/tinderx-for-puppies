@@ -16,12 +16,12 @@ class SelectorContainer extends React.PureComponent{
 
    onClickHandler = (event) => {
     if(event.target.id === 'no'){
-       this.props.swipeLeft(this.props.shownProfileId)
-       this.props.showNewProfile(this.props.currentUser.Id, this.props.shownProfileId)
+      this.props.swipeLeft(this.props.currentUser,this.props.shownProfileId)
+      this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId)
 
-    }else{
-      this.props.swipeRight(this.props.shownProfileId)
-      this.props.showNewProfile(this.props.currentUser.Id, this.props.shownProfileId)
+   }else{
+     this.props.swipeRight(this.props.currentUser,this.props.shownProfileId)
+     this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId)
     }
   }
 
@@ -48,8 +48,8 @@ class SelectorContainer extends React.PureComponent{
               onClick={this.onClickHandler} id="yes" >
                 Yes
               </button>
-              </div>
-            </div>
+          </div>
+        </div>
       </div>
     )
   }
