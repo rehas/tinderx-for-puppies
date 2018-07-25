@@ -8,10 +8,9 @@ export default (state = [], action = {}) => {
       const users = action.payload[1]
       const currentUser = users.filter((user)=>user.Id === currentUserId)[0]
 
-     // console.log(currentUser.Yes)
-      return state
-      users.filter((user)=>user.Id === currentUserId)
-    return state
+
+      return users.filter((user)=> currentUser.Yes.includes(user.Id))
+      .filter((user)=> user.Yes.includes(currentUserId) )
 
     default:
       return state
