@@ -8,7 +8,7 @@ export default (state = [], action = {}) => {
       const users = action.payload[1]
       const currentUser = users.filter((user)=>user.Id === currentUserId)[0]
 
-      console.log(currentUser.Yes)
+     // console.log(currentUser.Yes)
       return state
       users.filter((user)=>user.Id === currentUserId)
     return state
