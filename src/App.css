@@ -41,17 +41,19 @@ html,body, .App, #root, main,  .selector-container{
   /* display: flex; */
   margin:auto;
   width: 95%;
+  max-height: 50vh;
 }
 .selector-container-image{
   /* width: 100%;
   max-height: 100%; */
-  max-height: 50%;
-  max-width: 100%;
+  width: inherit;
+  max-height: 40vh;
   margin: 20px auto;
 }
 .user-bio-container{
   font-size: 2em;
   padding : 15px;
+  vertical-align: bottom;
 }
 
 @media only screen and (max-width: 700px){
