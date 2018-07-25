@@ -27,18 +27,29 @@ class SelectorContainer extends React.PureComponent{
 
   render(){
     return (
-      <div className="selector-container">
-        <p>{this.props.users.filter(x=>x.Id === this.props.shownProfileId)[0].Name}</p>
-        <button className="selector-container-button-no" onClick={this.onClickHandler} id="no"  >No</button>
-        <PictureContainer 
+      <div className="selector-container container">
+        <div className="row">
+          <div className="col-md-2 d-flex align-items-stretch" id="selector-container-left">
+            <button className="selector-container-button-no btn-danger btn-block btn-large" onClick={this.onClickHandler} id="no"  >No</button>
+          </div>
+          <div className="col-md-8">
+            <p>{this.props.users.filter(x=>x.Id === this.props.shownProfileId)[0].Name}</p>
+          <PictureContainer 
           user = { this.props.users.filter(x=>x.Id === this.props.shownProfileId).length 
             && 
           this.props.users.filter(x=>x.Id === this.props.shownProfileId)[0]} />
-        <button className="selector-container-button-yes" onClick={this.onClickHandler} id="yes" >Yes</button>
-        <ProfileBioContainer 
+          <ProfileBioContainer 
           user = {this.props.shownProfileId 
             &&
           this.props.users.filter(x=> x.Id === this.props.shownProfileId)[0]} />
+          </div>
+          <div className="col-md-2 d-flex align-items-stretch" id="selector-container-right">
+            <button className="selector-container-button-yes btn-success btn-block btn-large " 
+              onClick={this.onClickHandler} id="yes" >
+                Yes
+              </button>
+              </div>
+            </div>
       </div>
     )
   }
