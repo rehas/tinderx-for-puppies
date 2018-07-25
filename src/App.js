@@ -22,6 +22,7 @@ class App extends Component {
           <Route exact path = '/:id/selector' component ={SelectorContainer}  />
           <Route exact path = '/new-user' component ={CreateUserContainer}  />
           <Route exact path = '/' component ={HomeContainer}  />
+          
         </main>
         </div>
         <div className="col-md-1 app-left-column" id="app-left-column"></div>
