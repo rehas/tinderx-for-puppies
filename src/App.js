@@ -5,6 +5,7 @@ import {Route} from 'react-router-dom'
 import SelectorContainer from './containers/SelectorContainer';
 import UserTypeContainer from './containers/UserTypeContainer';
 import HomeContainer from './containers/HomeContainer';
+import SwipeTest from './no-commits/swipe-test'
 
 
 class App extends Component {
@@ -22,6 +23,8 @@ class App extends Component {
           <Route exact path = '/:id/selector' component ={SelectorContainer}  />
           <Route exact path = '/user-types' component ={UserTypeContainer}  />
           <Route exact path = '/' component ={HomeContainer}  />
+          <Route exact path = '/swipetest' component ={SwipeTest}  />
+          
         </main>
         </div>
         <div className="col-md-1 app-left-column" id="app-left-column"></div>

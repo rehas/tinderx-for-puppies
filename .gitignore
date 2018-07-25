@@ -17,6 +17,7 @@
 .env.production.local
 .eslint*
 /not-commit
+/src/no-commits
 
 npm-debug.log*
 yarn-debug.log*
