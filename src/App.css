@@ -40,13 +40,47 @@ html,body, .App, #root, main,  .selector-container{
   /* display: inline; */
   /* display: flex; */
   margin:auto;
-  width: 90%;
+  width: 95%;
 }
 .selector-container-image{
-  width: 100%;
+  /* width: 100%;
+  max-height: 100%; */
+  max-height: 50%;
+  max-width: 100%;
   margin: 20px auto;
 }
 .user-bio-container{
   font-size: 2em;
+  padding : 15px;
+}
+
+@media only screen and (max-width: 700px){
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 30px;
+  }
+  
+  .App-header {
+    background-color: #222;
+    height: 75px;
+    padding: 10px;
+    color: white;
+  }
+  
+  .App-title {
+    font-size: 1em;
+  }
+  
+  .App-intro {
+    font-size: small;
+  }
+  .user-bio-container{
+    font-size: 1em;
+    padding : 5px;
+  }
+  
+  .selector-container-button-yes, .selector-container-button-no{
+    display: none;
+  }
 
 }
