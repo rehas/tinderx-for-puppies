@@ -29,7 +29,7 @@ const users = [
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/affenpinscher/n02110627_8714.jpg",
     Bio: "I'm a 3 year old german shepard and very playful like peter pan I never grow up",
-    Yes: [],
+    Yes: [1,2],
     No: [],
   }, 
   {
@@ -40,7 +40,7 @@ const users = [
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/poodle-standard/n02113799_936.jpg",
     Bio: "I'm a pure breed poodle vey intelligent and love a brisk walk",
-    Yes: [],
+    Yes: [1],
     No: [],
   }, 
   {
@@ -51,7 +51,7 @@ const users = [
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/husky/n02110185_5030.jpg",
     Bio: "I'm a 6 year old pug and enjoy playing fetch",
-    Yes: [],
+    Yes: [2],
     No: [],
   }, 
   {
