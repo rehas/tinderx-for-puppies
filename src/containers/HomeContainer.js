@@ -6,15 +6,17 @@ import { setCurrentUser } from '../actions/user-actions'
 class HomeContainer extends PureComponent {
   render() {
     return (
-      <HomePresenter userId={this.props.userId} setCurrentUser={this.props.setCurrentUser} url={this.props} />
+      <HomePresenter 
+        currentUser={this.props.currentUser} 
+        setCurrentUser={this.props.setCurrentUser} 
+        url={this.props.currentUser} />
     )
   }
 }
 
-
 const mapStateToProps = (state) => {
   return {
-    userId: state.currentUser.Id
+    currentUser: state.currentUser.Id
   }
 }
 

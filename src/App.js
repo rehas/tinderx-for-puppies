@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import {Route} from 'react-router-dom'
 import SelectorContainer from './containers/SelectorContainer';
-import UserTypeContainer from './containers/UserTypeContainer';
+import CreateUserContainer from './containers/CreateUserContainer';
 import HomeContainer from './containers/HomeContainer';
 
 
@@ -17,10 +17,8 @@ class App extends Component {
         </header>
         <main>
           <Route exact path = '/:id/selector' component ={SelectorContainer}  />
-          <Route exact path = '/user-types' component ={UserTypeContainer}  />
+          <Route exact path = '/new-user' component ={CreateUserContainer}  />
           <Route exact path = '/' component ={HomeContainer}  />
-          
-          
         </main>
       </div>
     );
