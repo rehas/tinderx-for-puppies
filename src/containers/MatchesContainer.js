@@ -7,7 +7,7 @@ class MatchesContainer extends PureComponent{
   
   
   render(){
-    this.props.setMatches()
+    this.props.setMatches(this.props.currentUserId, this.props.users)
     return(
       <MatchesPresenter/>
     )
@@ -17,7 +17,8 @@ class MatchesContainer extends PureComponent{
 
 const mapStateToProps = (state) => {
   return {
-    userId: state.currentUser.Id
+    currentUserId: state.currentUser,
+    users: state.users
   }
 }
 
