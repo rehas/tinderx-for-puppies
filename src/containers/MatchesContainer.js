@@ -15,13 +15,14 @@ class MatchesContainer extends PureComponent{
       <h3>{match.Name}</h3>
       <p>{match.Email}</p>
       <img className="matches_container_matches-image" src={match.Pic} alt={match.Name}/>
+      <p>{match.Bio}</p>
       </div>})
   }
 
   render(){
     return(
       <div>
-      <MatchesPresenter renderMatches={this.renderMatches}/>
+      <MatchesPresenter currentUserId={this.currentUserId} renderMatches={this.renderMatches}/>
       </div>
     )
   }
