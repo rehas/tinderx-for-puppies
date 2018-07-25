@@ -4,19 +4,25 @@ import HomePresenter from '../presenters/HomePresenter';
 import { setCurrentUser } from '../actions/user-actions'
 
 class HomeContainer extends PureComponent {
+
+  handleEvent = (event, setCurrentUser) => {
+    const id = event.target.elements["userId"].value;
+    setCurrentUser(parseInt(id, 10));
+  }
+
   render() {
     return (
       <HomePresenter 
         currentUser={this.props.currentUser} 
         setCurrentUser={this.props.setCurrentUser} 
-        url={this.props.currentUser} />
+        handleEvent={this.handleEvent} />
     )
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    currentUser: state.currentUser.Id
+    currentUser: state.currentUser
   }
 }
 

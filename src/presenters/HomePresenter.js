@@ -4,22 +4,24 @@ import { Link } from 'react-router-dom';
 export default function HomePresenter(props) {
   return (
     <div className='home-presenter'>
-
+      
       <h1>PET PALs!</h1>
 
       <div className='home-presenter-login'>
         
         <form onSubmit={(event) => {
-          handleEvent(event, props.setCurrentUser);
+          event.preventDefault();
+          props.handleEvent(event, props.setCurrentUser);
           //props.url.match.path = `/${parseInt(props.userId)}/selector`;
           }}>
           <legend>Login</legend>
-          <input type="number" name="userId" id="userId"></input>
+          <input type="number" name="userId" id="userId" ></input>
             <label htmlFor="userId">Name</label>
-          <input type="password" name="userPassword" id="userPassword"></input>
-            <label>Password</label>
-          <Link to={`/${parseInt(props.currentUser, 10)}/selector`}><button>Submit</button></Link>
+          {/* <input type="password" name="userPassword" id="userPassword"></input>
+            <label>Password</label> */}
         </form>
+
+        <Link to={`/${parseInt(props.currentUser, 10)}/selector`}><button>Submit</button></Link>
         
       </div>
 
@@ -29,10 +31,4 @@ export default function HomePresenter(props) {
 
     </div>
   )
-}
-
-function handleEvent (event, setCurrentUser) {
-  const id = event.target.elements["userId"].value;
-  setCurrentUser(parseInt(id, 10));
-  event.preventDefault();
 }
