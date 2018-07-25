@@ -6,7 +6,19 @@ import ProfileBioContainer from './ProfileBioContainer'
 import * as userActions from '../actions/user-actions'
 import {showNewProfile} from '../actions/profile-actions'
 
+import Swipeable from 'react-swipeable'
+
+
 class SelectorContainer extends React.PureComponent{
+  onSwipedLeft = (e, absX) =>{
+    this.props.swipeLeft(this.props.currentUser,this.props.shownProfileId)
+    this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId)
+  }
+
+  onSwipedRight = (e, absX) => {
+    this.props.swipeRight(this.props.currentUser,this.props.shownProfileId)
+    this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId)
+  }
 
   componentDidMount(){
     if(this.props.currentUser.Pic === null ){
@@ -25,6 +37,8 @@ class SelectorContainer extends React.PureComponent{
     }
   }
 
+
+
   render(){
     return (
       <div className="selector-container container-fluid">
@@ -33,24 +47,24 @@ class SelectorContainer extends React.PureComponent{
             <button className="selector-container-button-no btn-danger btn-block btn-large" onClick={this.onClickHandler} id="no"  >No</button>
           </div>
           <div className="col-md-8 p-0 d-flex flex-column">
+          <Swipeable
+        onSwipedLeft={this.onSwipedLeft}
+        onSwipedRight={this.onSwipedRight}
+        >
             <div className="align-self-stretch m-2">
             <h2>{this.props.users.filter(x=>x.Id === this.props.shownProfileId)[0].Name}</h2>
-            
             </div>
-            
             <PictureContainer 
           user = { this.props.users.filter(x=>x.Id === this.props.shownProfileId).length 
             && 
           this.props.users.filter(x=>x.Id === this.props.shownProfileId)[0]} />
-            
-            
             <ProfileBioContainer 
                 user = {this.props.shownProfileId 
                   &&
                 this.props.users.filter(x=> x.Id === this.props.shownProfileId)[0]} />
-            
-          
+      </Swipeable>
           </div>
+
           <div className="col-md-2 d-flex align-items-stretch p-0" id="selector-container-right">
             <button className="selector-container-button-yes btn-success btn-block btn-large " 
               onClick={this.onClickHandler} id="yes" >
@@ -79,3 +93,4 @@ const mapDispatchToProps = {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SelectorContainer)
+
