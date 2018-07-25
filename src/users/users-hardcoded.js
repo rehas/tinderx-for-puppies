@@ -1,6 +1,8 @@
 const users = [
   {
     Id: 1,
+    Email: "test1@petpals.com",
+    Password: "happy",
     Name: "Harold",
     Type: "Walker",
     Pic: "https://images.dog.ceo/breeds/appenzeller/n02107908_3728.jpg",
@@ -10,6 +12,8 @@ const users = [
   }, 
   {
     Id: 2,
+    Email: "test2@petpals.com",
+    Password: "sad",
     Name: "Stephanie",
     Type: "Walker",
     Pic: "https://images.dog.ceo/breeds/kuvasz/n02104029_4815.jpg",
@@ -19,6 +23,8 @@ const users = [
   }, 
   {
     Id: 3,
+    Email: "test3@petpals.com",
+    Password: "strong",
     Name: "Spike",
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/affenpinscher/n02110627_8714.jpg",
@@ -28,6 +34,8 @@ const users = [
   }, 
   {
     Id: 4,
+    Email: "test4@petpals.com",
+    Password: "weak",
     Name: "Princess",
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/poodle-standard/n02113799_936.jpg",
@@ -37,6 +45,8 @@ const users = [
   }, 
   {
     Id: 5,
+    Email: "test5@petpals.com",
+    Password: "fast",
     Name: "Rex",
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/husky/n02110185_5030.jpg",
@@ -46,6 +56,8 @@ const users = [
   }, 
   {
     Id: 6,
+    Email: "test6@petpals.com",
+    Password: "slow",
     Name: "Fluffy",
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/weimaraner/n02092339_4410.jpg",
@@ -55,6 +67,8 @@ const users = [
   },
   {
     Id: 7,
+    Email: "test7@petpals.com",
+    Password: "truth",
     Name: "Ralph",
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/shihtzu/n02086240_5889.jpg",
@@ -64,6 +78,8 @@ const users = [
   }, 
   {
     Id: 8,
+    Email: "test8@petpals.com",
+    Password: "lies",
     Name: "Abby",
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/deerhound-scottish/n02092002_6978.jpg",
