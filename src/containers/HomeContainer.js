@@ -15,7 +15,7 @@ class HomeContainer extends PureComponent {
     const validatePassword = this.props.users.filter(user => user.Password === this.state.userPassword)
     if (validateEmail.length === 1 && validatePassword.length === 1) {
 
-      this.props.setCurrentUser(parseInt(validateEmail[0].Id, 10))
+      this.props.setCurrentUser(parseInt(validateEmail[0].Id, 10));
       }
     else {
       console.log("error")
