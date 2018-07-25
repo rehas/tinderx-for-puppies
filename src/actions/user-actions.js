@@ -9,16 +9,16 @@ export function setCurrentUser(id) {
   }
 }
 
-export function swipeRight(id) {
+export function swipeRight(currentUserId,id) {
   return {
     type: YES_PLEASE,
-    payload: id
+    payload: [currentUserId, id]
   }
 }
 
-export function swipeLeft(id) {
+export function swipeLeft(currentUserId, id) {
   return {
     type: NO_THANKS,
-    payload: id
+    payload: [currentUserId, id]
   }
 }

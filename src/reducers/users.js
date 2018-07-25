@@ -1,23 +1,21 @@
 import users from '../users/users-hardcoded'
-import {YES_PLEASE, NO_THANKS, } from '../actions/user-actions'
-import {SHOW_NEW_PROFILE} from '../actions/profile-actions'
+import { YES_PLEASE, NO_THANKS, } from '../actions/user-actions'
 
 
 
 const initialState = users
 
 export default (state = initialState, action = {}) => {
-  switch (action) {
-    case SHOW_NEW_PROFILE:
-    const currentUser = users.filter(user => action.payload.userId === user.Id)[0]
-      return [...state,
-        {...currentUser} ]
+  switch (action.type) {
+    case YES_PLEASE:
+      const newState = [...state]
+      newState[action.payload[0] - 1].Yes = newState[action.payload[0] - 1].Yes.concat(action.payload[1])
+      return newState
 
-        case YES_PLEASE:
-        return [...state][currentUser].Yes = state.Yes.concat(action.payload)
-      
-      case NO_THANKS:
-        return [...state][currentUser].No = state.No.concat(action.payload)
+    case NO_THANKS:
+    const newState2 = [...state]
+    newState2[action.payload[0] - 1].No = newState2[action.payload[0] - 1].No.concat(action.payload[1])
+    return newState2
 
     default:
       return state
