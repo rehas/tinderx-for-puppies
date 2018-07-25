@@ -1,12 +1,12 @@
 import * as React from 'react'
 import { connect } from 'react-redux';
+import Swipeable from 'react-swipeable'
 
 import PictureContainer from './PictureContainer'
 import ProfileBioContainer from './ProfileBioContainer'
 import * as userActions from '../actions/user-actions'
 import {showNewProfile} from '../actions/profile-actions'
 
-import Swipeable from 'react-swipeable'
 
 
 class SelectorContainer extends React.PureComponent{
