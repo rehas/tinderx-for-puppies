@@ -15,7 +15,7 @@ export default function HomePresenter(props) {
             <label htmlFor="userEmail">Email</label>
           <input type="password" name="userPassword" id="userPassword" onChange={props.handleChange}></input>
             <label htmlFor="userPassword">Password</label>
-          <Link to={`/${parseInt(props.currentUser, 10)}/selector`}><button onClick={() => props.handleEvent()}>Submit</button></Link>
+         <button onClick={() => props.handleEvent()}>Submit</button>
         </form>
         
       </div>

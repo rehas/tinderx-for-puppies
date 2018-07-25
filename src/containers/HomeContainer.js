@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
-import { connect } from 'react-redux';
-import HomePresenter from '../presenters/HomePresenter';
+import React, { PureComponent } from 'react'
+import { connect } from 'react-redux'
+import HomePresenter from '../presenters/HomePresenter'
 import { setCurrentUser } from '../actions/user-actions'
 
 class HomeContainer extends PureComponent {
@@ -16,6 +16,7 @@ class HomeContainer extends PureComponent {
     if (validateEmail.length === 1 && validatePassword.length === 1) {
 
       this.props.setCurrentUser(parseInt(validateEmail[0].Id, 10));
+      this.props.history.push(`/${parseInt(validateEmail[0].Id, 10)}/selector`)
       }
     else {
       console.log("error")
@@ -26,7 +27,7 @@ class HomeContainer extends PureComponent {
   handleChange  = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   }
-
+  
   render() {
     return (
       <HomePresenter 
