@@ -28,7 +28,7 @@ class SelectorContainer extends React.PureComponent{
   render(){
     return (
       <div className="selector-container">
-        <p>I'm the gamePage container</p>
+        <p>{this.props.users.filter(x=>x.Id === this.props.shownProfileId)[0].Name}</p>
         <button className="selector-container-button-no" onClick={this.onClickHandler} id="no"  >No</button>
         <PictureContainer 
           user = { this.props.users.filter(x=>x.Id === this.props.shownProfileId).length 
