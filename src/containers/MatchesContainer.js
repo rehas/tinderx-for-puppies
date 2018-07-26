@@ -24,12 +24,12 @@ class MatchesContainer extends PureComponent {
       )
     }
     return this.props.matches.map((match)=> {
-    return <div key={match.Id} className='col-md-8 matches_container_matches photo-page-container h-25 d-inline-block'>
+    return <div key={match.Id} className='col-md-10 matches_container_matches photo-page-container h-25 d-inline-block'>
       <h3>{match.Name}</h3>
       <a href={`mailto:${match.Email}`}>
       <p>{ match.Email}</p>
       </a>
-      <a href={`https://wa.me/${match.Phone}`}>
+      <a href={`https://api.whatsapp.com/send?phone=${match.Phone}`}>
       <p>{ match.Phone}</p>
       </a>
       <img className="matches_container_matches-image img-fluid selector-container-image" src={match.Pic} alt={match.Name}/>
@@ -46,9 +46,9 @@ class MatchesContainer extends PureComponent {
   render(){
     return(
       <div className="selector-container">
-      <div className="row">
-      <div className="col-md-2"></div>
-      <div className="col-md-8">
+      <div className="row justify-content-center">
+      {this.props.matches.lentgh ===0 && <div className="col-md-1"></div>}
+      <div className="col-md-10">
       <MatchesPresenter 
         currentUserId={this.currentUserId} 
         renderMatches={this.renderMatches} 
@@ -56,7 +56,7 @@ class MatchesContainer extends PureComponent {
         currentUser={this.props.currentUserId}
         users={this.props.users}/>      </div>
       </div>
-      <div className="col-md-2"></div>
+      {this.props.matches.lentgh ===0 && <div className="col-md-1"></div>}
       </div>
 
     )
