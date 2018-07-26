@@ -5,7 +5,7 @@ export default function HomePresenter(props) {
     <div className='home-presenter'>
       <div className='home-presenter-login'>
         
-        <form name="submitMe" onSubmit={(event) => {event.preventDefault()}}>
+        <form name="submitMe" onSubmit={props.handleEvent}>
               <legend>Login</legend>
         <div className="form-row">
             <div className="form-group col">
@@ -17,7 +17,7 @@ export default function HomePresenter(props) {
         
         </div>
         <div className="form-group">
-          <button className="btn btn-primary" onClick={() => props.handleEvent()}>Login</button>
+          <button type="submit" className="btn btn-primary" >Login</button>
         </div>
         </form>
       </div>
@@ -26,3 +26,6 @@ export default function HomePresenter(props) {
 }
 
 
+// onClick={() => props.handleEvent()
+
+// (event) => {event.preventDefault()}
