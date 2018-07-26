@@ -1,11 +1,14 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux';
 import MatchesPresenter from '../presenters/MatchesPresenter';
-import {setMatches} from '../actions/setMatches'
+import { setMatches } from '../actions/setMatches'
+import { getCurrentUser, getStateFromBrowser } from '../actions/user-actions'
+import {showNewProfile} from '../actions/profile-actions'
 
-class MatchesContainer extends PureComponent{
-  
-  componentDidMount(){
+
+class MatchesContainer extends PureComponent {
+
+  componentDidMount() {
     this.props.currentUserId !== null && this.props.setMatches(this.props.currentUserId, this.props.users)
   }
 
@@ -26,16 +29,20 @@ class MatchesContainer extends PureComponent{
       </div>})
   }
 
-  componentWillMount(){
-    this.props.currentUserId === null && (this.props.history.push(`/`))
+  componentWillMount() {
+    this.props.getCurrentUser() === null && (this.props.history.push(`/`))
   }
 
   render(){
     return(
       <div className="selector-container">
       <div className="row">
-      <MatchesPresenter currentUserId={this.currentUserId} renderMatches={this.renderMatches}/>
-      </div>
+      <MatchesPresenter 
+        currentUserId={this.currentUserId} 
+        renderMatches={this.renderMatches} 
+        showNewProfile={this.props.showNewProfile}
+        currentUser={this.props.currentUserId}
+        users={this.props.users}/>      </div>
       </div>
     )
   }
@@ -49,4 +56,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {setMatches})(MatchesContainer)
+export default connect(mapStateToProps, { setMatches, getCurrentUser, getStateFromBrowser, showNewProfile })(MatchesContainer)

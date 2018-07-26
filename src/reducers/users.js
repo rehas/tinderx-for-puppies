@@ -3,7 +3,7 @@ import { YES_PLEASE, NO_THANKS, GET_STATE_FROM_BROWSER } from '../actions/user-a
 import { CREATE_NEW_PROFILE } from '../actions/profile-actions'
 
 
-const initialState = users
+const initialState = JSON.parse(localStorage.getItem('users')) || users
 
 export default (state = initialState, action = {}) => {
   switch (action.type) {

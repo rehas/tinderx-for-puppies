@@ -3,6 +3,8 @@ export const YES_PLEASE = 'YES_PLEASE'
 export const NO_THANKS = 'NO_THANKS'
 export const LOGOUT_USER = 'LOGOUT_USER'
 export const GET_STATE_FROM_BROWSER = 'GET_STATE_FROM_BROWSER'
+export const GET_USER = 'GET_USER'
+
 
 
 export function getStateFromBrowser(){
@@ -15,6 +17,12 @@ export function setCurrentUser(id) {
   return {
     type: SELECT_USER,
     payload: id
+  }
+}
+
+export function getCurrentUser() {
+  return {
+    type: GET_USER,
   }
 }
 
