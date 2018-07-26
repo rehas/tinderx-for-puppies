@@ -1,12 +1,8 @@
 import { SELECT_USER, LOGOUT_USER, GET_USER } from '../actions/user-actions'
 
-const initialState = ()=>{
-  if(parseInt(localStorage.getItem('currentUser')) === 'null'){
-    return null
-  } else {
-    return parseInt(localStorage.getItem('currentUser'))
-  }
-}
+const initialState = parseInt(localStorage.getItem('currentUser')) || null
+  
+
 
 export default (state = initialState, action = {}) => {
   switch (action.type) {

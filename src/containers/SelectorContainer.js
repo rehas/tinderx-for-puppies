@@ -33,6 +33,7 @@ class SelectorContainer extends React.PureComponent{
 
   componentWillMount(){
     this.props.currentUser === null && (this.props.history.push(`/`))
+    this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId, this.props.users)
   }
 
   render(){
