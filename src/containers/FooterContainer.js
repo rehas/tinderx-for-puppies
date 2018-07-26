@@ -9,10 +9,10 @@ class FooterContainer extends PureComponent{
     const path = this.props.location.pathname
 
     const matchButtonClass = (path === '/' || path.includes('matches') || path.includes('new-user')) 
-      ? 'd-none' : 'btn'
-    const logoutButtonClass = (path === '/' || path.includes('new-user')) ? 'd-none' : 'btn'
+      ? 'd-none' : 'btn btn-primary'
+    const logoutButtonClass = (path === '/' || path.includes('new-user')) ? 'd-none' : 'btn btn-primary'
     const selectorButtonClass = (path === '/' || path.includes('selector') || path.includes('new-user') )
-    ? 'd-none' : 'btn' ;
+    ? 'd-none' : 'btn btn-primary' ;
 
     const createProfileButtonClass = (path === '/') ? 'btn btn-primary' : 'd-none'
     
