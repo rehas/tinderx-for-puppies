@@ -122,3 +122,9 @@ html,body, .App, #root, main,  .selector-container{
   }
 
 }
+
+@media only screen and (max-width: 350px){
+  .btn{
+    margin: 0 5px;
+  }
+}

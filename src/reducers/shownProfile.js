@@ -1,4 +1,3 @@
-import users from '../users/users-hardcoded'
 import {SHOW_NEW_PROFILE} from '../actions/profile-actions'
 
 export default (state = null, action = {}) => {

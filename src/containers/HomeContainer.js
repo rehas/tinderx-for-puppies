@@ -13,7 +13,8 @@ class HomeContainer extends PureComponent {
   }
 
 
-  handleEvent = () => {
+  handleEvent = (e) => {
+    e.preventDefault()
     const validateEmail = this.props.users.filter(user => user.Email === this.state.userEmail)
     const validatePassword = validateEmail.filter(user => user.Password === this.state.userPassword)
     if (validateEmail.length === 1 && validatePassword.length === 1) {
