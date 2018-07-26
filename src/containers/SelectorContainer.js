@@ -1,13 +1,14 @@
 import React from 'react'
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 import Swipeable from 'react-swipeable'
 import SelectorPresenter from '../presenters/SelectorPresenter'
 import PictureContainer from './PictureContainer'
 import ProfileBioContainer from './ProfileBioContainer'
 import * as userActions from '../actions/user-actions'
 import {showNewProfile} from '../actions/profile-actions'
-
-
+import createNotifications from './NotificationContainer'
+import { NotificationContainer } from 'react-notifications';
+ 
 
 class SelectorContainer extends React.PureComponent{
   onSwipedLeft = (e, absX) =>{
@@ -35,12 +36,18 @@ class SelectorContainer extends React.PureComponent{
     this.props.currentUser === null && (this.props.history.push(`/`))
   }
 
+  componentDidMount(){
+    const userName = this.props.users.filter(user => user.Id === this.props.currentUser)[0].Name
+    createNotifications('info', userName)
+  }
+
   render(){
     if (this.props.users.filter(x=>x.Id === this.props.shownProfileId)[0] === undefined) { 
       return <SelectorPresenter currentUser={this.props.currentUser}/>
     }
     else { return (
       <div className="selector-container">
+        <NotificationContainer />
         <div className="row">
           <div className="col-md-2 d-flex align-items-stretch p-0" id="selector-container-left">
             <button className="selector-container-button-no btn-danger btn-block btn-large" onClick={this.onClickHandler} id="no"  >No</button>
