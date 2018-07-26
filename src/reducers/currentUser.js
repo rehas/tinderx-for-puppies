@@ -1,7 +1,7 @@
 import users from '../users/users-hardcoded'
 import {SELECT_USER} from '../actions/user-actions'
 
-const initialState = users[0].Id
+const initialState = null
 
 export default (state = initialState, action = {}) => {
   switch (action.type) {

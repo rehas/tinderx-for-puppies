@@ -3,6 +3,7 @@
 }
 html,body, .App, #root, main,  .selector-container{
   height: 100%;
+  background-color: #FCF7FF;
 }
 .row{
   height: 90%;
@@ -10,18 +11,18 @@ html,body, .App, #root, main,  .selector-container{
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 50px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #7a4579;
+  height: 100px;
   padding: 20px;
   color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .App-intro {
@@ -32,8 +33,13 @@ html,body, .App, #root, main,  .selector-container{
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.selector-container{
+  background-color: #ddddf3;
+}
+
 .selector-container-button-yes, .selector-container-button-no{
   display: inline;
+  /* background-color: #ec9e69; */
 }
 
 .photo-page-container{
@@ -55,6 +61,17 @@ html,body, .App, #root, main,  .selector-container{
   padding : 15px;
   vertical-align: bottom;
 }
+.page-footer{
+  /* position: absolute; */
+  bottom: 0;
+  /* width: inherit; */
+  background-color: #655560;
+  color: wheat;
+  height: 60px;
+}
+
+
+
 
 @media only screen and (max-width: 700px){
   .App-logo {
