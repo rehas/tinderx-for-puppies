@@ -16,8 +16,10 @@ class MatchesContainer extends PureComponent {
     if(this.props.matches.length === 0){
       return (
         <div className="selector_presenter">
+        <div>
           <img className="selector-container-image img-fluid" src={require('../puppylove.jpg')} alt="no more"/>
           <h4>You don't have any matches yet, keep looking</h4>
+        </div>
         </div>
       )
     }
@@ -45,6 +47,8 @@ class MatchesContainer extends PureComponent {
     return(
       <div className="selector-container">
       <div className="row">
+      <div className="col-md-2"></div>
+      <div className="col-md-8">
       <MatchesPresenter 
         currentUserId={this.currentUserId} 
         renderMatches={this.renderMatches} 
@@ -52,6 +56,9 @@ class MatchesContainer extends PureComponent {
         currentUser={this.props.currentUserId}
         users={this.props.users}/>      </div>
       </div>
+      <div className="col-md-2"></div>
+      </div>
+
     )
   }
 }
