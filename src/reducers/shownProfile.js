@@ -1,7 +1,7 @@
 import users from '../users/users-hardcoded'
 import {SHOW_NEW_PROFILE} from '../actions/profile-actions'
 
-export default (state = users[2].Id, action = {}) => {
+export default (state = null, action = {}) => {
   switch (action.type) {
     
     case SHOW_NEW_PROFILE :
