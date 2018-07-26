@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux';
 import MatchesPresenter from '../presenters/MatchesPresenter';
 import {setMatches} from '../actions/setMatches'
-import matches from '../reducers/matches';
 
 class MatchesContainer extends PureComponent{
   
