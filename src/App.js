@@ -13,11 +13,6 @@ class App extends Component {
   
   
   render() {
-    // const User = ({ match }) => {
-    //   console.log(match)
-    // }
-    // console.log(this.props.location)
-    // User()
     return (
       <div className="App container-fluid" id="main-container" >
         <div className="row">
@@ -25,7 +20,7 @@ class App extends Component {
           <div className="col-md-10 h-100 d-inline-block">
             <header className="App-header text-success">
               <img src={logo} className="App-logo" alt="logo" />
-              <h1 className="App-title">Welcome to Tinder For Puppies</h1>
+              <h1 className="App-title">PET PALS</h1>
             </header>
             <div id="app-main-div" className="container-fluid">
               <Route exact path='/' component={HomeContainer} />
