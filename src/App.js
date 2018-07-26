@@ -10,7 +10,14 @@ import FooterContainer from './containers/FooterContainer'
 
 
 class App extends Component {
+  
+  
   render() {
+    // const User = ({ match }) => {
+    //   console.log(match)
+    // }
+    // console.log(this.props.location)
+    // User()
     return (
       <div className="App container-fluid" id="main-container" >
         <div className="row">
@@ -25,7 +32,8 @@ class App extends Component {
               <Route exact path='/:id/matches' component={MatchesContainer} />
               <Route exact path='/:id/selector' component={SelectorContainer} />
               <Route exact path = '/new-user' component ={CreateUserContainer}  />
-              <FooterContainer/>
+             <Route component={(props) => <FooterContainer {...props} extra={"hello"} />}/>
+              {/* <FooterContainer isHomePage={null}/> */}
             </div >
           </div>
           <div className="col-md-1 app-left-column" id="app-left-column"></div>
