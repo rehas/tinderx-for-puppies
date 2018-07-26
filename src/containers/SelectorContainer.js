@@ -31,6 +31,10 @@ class SelectorContainer extends React.PureComponent{
     }
   }
 
+  componentWillMount(){
+    this.props.currentUser === null && (this.props.history.push(`/`))
+  }
+
   render(){
     if (this.props.users.filter(x=>x.Id === this.props.shownProfileId)[0] === undefined) { 
       return <SelectorPresenter currentUser={this.props.currentUser}/>
