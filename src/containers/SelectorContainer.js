@@ -7,7 +7,6 @@ import ProfileBioContainer from './ProfileBioContainer'
 import * as userActions from '../actions/user-actions'
 import {showNewProfile} from '../actions/profile-actions'
 
-import { Link } from 'react-router-dom';
 
 
 class SelectorContainer extends React.PureComponent{
@@ -42,14 +41,13 @@ class SelectorContainer extends React.PureComponent{
 
   render(){
     return (
-      <div className="selector-container container-fluid">
-      <Link to={ `/${this.props.currentUser}/matches` }><button>My matches</button></Link>
+      <div className="selector-container">
         <div className="row">
           <div className="col-md-2 d-flex align-items-stretch p-0" id="selector-container-left">
             <button className="selector-container-button-no btn-danger btn-block btn-large" onClick={this.onClickHandler} id="no"  >No</button>
           </div>
-          <div className="col-md-8 p-0 d-flex flex-column">
-          <Swipeable
+          <div className="col-md-8 p-0">
+          <Swipeable className=""
         onSwipedLeft={this.onSwipedLeft}
         onSwipedRight={this.onSwipedRight}
         >
