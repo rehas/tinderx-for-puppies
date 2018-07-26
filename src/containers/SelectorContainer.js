@@ -5,10 +5,8 @@ import SelectorPresenter from '../presenters/SelectorPresenter'
 import PictureContainer from './PictureContainer'
 import ProfileBioContainer from './ProfileBioContainer'
 import * as userActions from '../actions/user-actions'
-import {showNewProfile} from '../actions/profile-actions'
+import { showNewProfile } from '../actions/profile-actions'
 import createNotifications from './NotificationContainer'
-import { NotificationContainer } from 'react-notifications';
- 
 
 class SelectorContainer extends React.PureComponent{
   onSwipedLeft = (e, absX) =>{
@@ -33,13 +31,12 @@ class SelectorContainer extends React.PureComponent{
   }
 
   componentWillMount(){
-    this.props.currentUser === null && (this.props.history.push(`/`))
-    this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId, this.props.users)
-  }
-
-  componentDidMount(){
-    const userName = this.props.users.filter(user => user.Id === this.props.currentUser)[0].Name
-    createNotifications('info', userName)
+    this.props.currentUser === null && this.props.history.push(`/`)
+    this.props.currentUser !== null && this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId, this.props.users)
+    if (this.props.currentUser !== null) {
+      const userName = this.props.users.filter(user => user.Id === this.props.currentUser)[0].Name
+      createNotifications('login', userName)
+    }
   }
 
   render(){
@@ -48,7 +45,6 @@ class SelectorContainer extends React.PureComponent{
     }
     else { return (
       <div className="selector-container">
-        <NotificationContainer />
         <div className="row">
           <div className="col-md-2 d-flex align-items-stretch p-0" id="selector-container-left">
             <button className="selector-container-button-no btn-danger btn-block btn-large" onClick={this.onClickHandler} id="no"  >No</button>

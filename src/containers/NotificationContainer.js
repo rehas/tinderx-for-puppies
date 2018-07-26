@@ -3,8 +3,8 @@ import 'react-notifications/lib/notifications.css'
  
 export default function createNotifications(type, props) {
   switch (type) {
-    case 'info':
-      return NotificationManager.info(`Logged in as ${props}`);
+    case 'login':
+      return NotificationManager.info(`Logged in as ${props}`,null, 1000);
     case 'success':
       return NotificationManager.success('You matched with NAME_HERE', 'It\'s A Match!');
     case 'warning':
