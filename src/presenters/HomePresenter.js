@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export default function HomePresenter(props) {
   return (
@@ -22,11 +21,6 @@ export default function HomePresenter(props) {
         </div>
         </form>
       </div>
-
-      <div className='home-presenter-sign-up'>
-        <Link to={ `/new-user` }><button className="btn btn-primary">Sign Up</button></Link>
-      </div>
-
     </div>
   )
 }
