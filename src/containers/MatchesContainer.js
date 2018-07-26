@@ -6,7 +6,8 @@ import {setMatches} from '../actions/setMatches'
 class MatchesContainer extends PureComponent{
   
   componentDidMount(){
-  this.props.setMatches(this.props.currentUserId, this.props.users)}
+    this.props.currentUserId !== null && this.props.setMatches(this.props.currentUserId, this.props.users)
+  }
 
   renderMatches = () => {
     return this.props.matches.map((match)=> {
@@ -18,6 +19,10 @@ class MatchesContainer extends PureComponent{
       </div>})
   }
 
+  componentWillMount(){
+    this.props.currentUserId === null && (this.props.history.push(`/`))
+  }
+
   render(){
     return(
       <div>
@@ -26,7 +31,6 @@ class MatchesContainer extends PureComponent{
     )
   }
 }
-
 
 const mapStateToProps = (state) => {
   return {
