@@ -13,14 +13,13 @@ class MatchesContainer extends PureComponent {
   }
 
   renderMatches = () => {
-    return this.props.matches.map((match) => {
-      return <div className='matches_container_matches'>
-        <h3>{match.Name}</h3>
-        <p>{match.Email}</p>
-        <img className="matches_container_matches-image" src={match.Pic} alt={match.Name} />
-        <p>{match.Bio}</p>
-      </div>
-    })
+    return this.props.matches.map((match)=> {
+    return <div key={match.Id} className='matches_container_matches'>
+      <h3>{match.Name}</h3>
+      <p>{match.Email}</p>
+      <img className="matches_container_matches-image" src={match.Pic} alt={match.Name}/>
+      <p>{match.Bio}</p>
+      </div>})
   }
 
   componentWillMount() {
