@@ -14,7 +14,7 @@ export default (state = initialState, action = {}) => {
       return parseInt(localStorage.getItem('currentUser'))
     case LOGOUT_USER:
       localStorage.setItem('currentUser', JSON.stringify(initialState))
-      return initialState
+      return null
     default:
       return state
   }
