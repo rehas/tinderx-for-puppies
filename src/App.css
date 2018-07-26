@@ -3,7 +3,7 @@
 }
 html,body, .App, #root, main,  .selector-container{
   height: 100%;
-  background-color: #FCF7FF;
+  background-color: #E5ECE9;
 }
 .row{
   height: 90%;
@@ -11,22 +11,40 @@ html,body, .App, #root, main,  .selector-container{
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 50px;
+  height: 60px;
 }
 
 .App-header {
-  background-color: #7a4579;
-  height: 100px;
+  background-color: #969A97;
+  height: 150px;
   padding: 20px;
-  color: white;
+  color: #D6D1CD;
+  fill : white;
 }
 
 .App-title {
-  font-size: 1.2em;
+  font-size: 2.5em;
+  color : #D6D1CD;
 }
 
 .App-intro {
   font-size: large;
+}
+.btn{
+  background-color: #846b73;
+  border-color: #8e6b7e;
+  margin: 0 20px;
+}
+.btn:hover{
+  background-color: #705563;
+  border-color: #8e6b7e;
+}
+
+.btn-success{
+  background-color: #58a068;
+}
+.btn-danger{
+  background-color: #db4a58;
 }
 
 @keyframes App-logo-spin {
@@ -34,7 +52,7 @@ html,body, .App, #root, main,  .selector-container{
   to { transform: rotate(360deg); }
 }
 .selector-container{
-  background-color: #ddddf3;
+  background-color: #D6D1CD;
 }
 
 .selector-container-button-yes, .selector-container-button-no{
@@ -60,12 +78,13 @@ html,body, .App, #root, main,  .selector-container{
   font-size: 2em;
   padding : 15px;
   vertical-align: bottom;
+  background-color: #E5ECE9;
 }
 .page-footer{
   /* position: absolute; */
   bottom: 0;
   /* width: inherit; */
-  background-color: #655560;
+  background-color: #969A97;
   color: wheat;
   height: 60px;
 }
@@ -80,10 +99,10 @@ html,body, .App, #root, main,  .selector-container{
   }
   
   .App-header {
-    background-color: #222;
+    /* background-color: #222; */
     height: 75px;
     padding: 10px;
-    color: white;
+    /* color: white; */
   }
   
   .App-title {
