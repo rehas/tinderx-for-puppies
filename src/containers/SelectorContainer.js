@@ -7,6 +7,7 @@ import ProfileBioContainer from './ProfileBioContainer'
 import * as userActions from '../actions/user-actions'
 import { showNewProfile } from '../actions/profile-actions'
 import createNotifications from './NotificationContainer'
+import { setMatches } from '../actions/setMatches'
 
 class SelectorContainer extends React.PureComponent{
   onSwipedLeft = (e, absX) =>{
@@ -20,17 +21,17 @@ class SelectorContainer extends React.PureComponent{
   }
 
    onClickHandler = (event) => {
-    if(event.target.id === 'no'){
+    if (event.target.id === 'no') {
       this.props.swipeLeft(this.props.currentUser,this.props.shownProfileId)
       this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId, this.props.users)
-
-   }else{
+    }
+    else {
      this.props.swipeRight(this.props.currentUser,this.props.shownProfileId)
      this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId, this.props.users)
     }
   }
 
-  componentWillMount(){
+  componentWillMount() {
     this.props.currentUser === null && this.props.history.push(`/`)
     this.props.currentUser !== null && this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId, this.props.users)
     if (this.props.currentUser !== null) {
@@ -39,11 +40,13 @@ class SelectorContainer extends React.PureComponent{
     }
   }
 
-  render(){
+  render() {
     if (this.props.users.filter(x=>x.Id === this.props.shownProfileId)[0] === undefined) { 
       return <SelectorPresenter currentUser={this.props.currentUser}/>
     }
-    else { return (
+    else { 
+      this.props.setMatches(this.props.currentUser, this.props.users)
+      return (
       <div className="selector-container">
         <div className="row">
           <div className="col-md-2 d-flex align-items-stretch p-0" id="selector-container-left">
@@ -52,8 +55,7 @@ class SelectorContainer extends React.PureComponent{
           <div className="col-md-8 p-0">
             <Swipeable
               onSwipedLeft={this.onSwipedLeft}
-              onSwipedRight={this.onSwipedRight}
-            >
+              onSwipedRight={this.onSwipedRight}>
               <div className="align-self-stretch m-2">
                 <h2>{this.props.users.filter(x=>x.Id === this.props.shownProfileId)[0].Name}</h2>
               </div>
@@ -86,9 +88,10 @@ const mapStateToProps =  (state) =>{
 }
 
 const mapDispatchToProps = {
-    swipeLeft : userActions.swipeLeft,
-    swipeRight : userActions.swipeRight,
-    showNewProfile : showNewProfile
+  swipeLeft : userActions.swipeLeft,
+  swipeRight : userActions.swipeRight,
+  showNewProfile : showNewProfile,
+  setMatches : setMatches,
 
 }
 
