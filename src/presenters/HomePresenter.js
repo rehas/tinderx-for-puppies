@@ -11,9 +11,9 @@ export default function HomePresenter(props) {
         
         <form name="submitMe" onSubmit={(event) => {event.preventDefault()}}>
           <legend>Login</legend>
-          <input type="email" name="userEmail" id="userEmail" onChange={props.handleChange}></input>
+          <input type="email" name="userEmail" id="userEmail" onChange={props.handleChange} required></input>
             <label htmlFor="userEmail">Email</label>
-          <input type="password" name="userPassword" id="userPassword" onChange={props.handleChange}></input>
+          <input type="password" name="userPassword" id="userPassword" onChange={props.handleChange} required></input>
             <label htmlFor="userPassword">Password</label>
          <button onClick={() => props.handleEvent()}>Submit</button>
         </form>
