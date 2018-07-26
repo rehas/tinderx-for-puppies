@@ -1,6 +1,7 @@
 export const SELECT_USER = 'SELECT_USER'
 export const YES_PLEASE = 'YES_PLEASE'
 export const NO_THANKS = 'NO_THANKS'
+export const LOGOUT_USER = 'LOGOUT_USER'
 export const GET_STATE_FROM_BROWSER = 'GET_STATE_FROM_BROWSER'
 
 
@@ -14,6 +15,12 @@ export function setCurrentUser(id) {
   return {
     type: SELECT_USER,
     payload: id
+  }
+}
+
+export function logOut() {
+  return {
+    type: LOGOUT_USER
   }
 }
 
