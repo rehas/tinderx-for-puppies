@@ -1,5 +1,4 @@
-import users from '../users/users-hardcoded'
-import {SELECT_USER} from '../actions/user-actions'
+import {SELECT_USER, LOGOUT_USER} from '../actions/user-actions'
 
 const initialState = null
 
@@ -8,9 +7,9 @@ export default (state = initialState, action = {}) => {
 
     case SELECT_USER:
       return action.payload
-
+    case LOGOUT_USER:
+      return initialState
     default:
-      console.log('default in current user')
       return state 
   }
 }
