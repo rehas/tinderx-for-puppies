@@ -1,8 +1,9 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux'
+import { logOut } from '../actions/user-actions'
 
-
-export default class FooterContainer extends PureComponent{
+class FooterContainer extends PureComponent{
   render(){
     console.log("footerContainer")
     console.log(this.props.location.pathname)
@@ -14,8 +15,10 @@ export default class FooterContainer extends PureComponent{
       <div className="card-footer page-footer"> 
       I'm the footer
       <Link to={ `/${this.props.currentUser}/matches` }><button className={matchButtonClass}>My matches</button></Link>
-      
+      <Link to={`/`}><button onClick={() => this.props.logOut()}>logout</button></Link>
       </div>
     )
   }
 }
+
+export default connect(null, {logOut})(FooterContainer)
