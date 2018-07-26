@@ -9,13 +9,14 @@ class CreateUserContainer extends PureComponent{
   handleSubmit = (e)=>{
     e.preventDefault()
     
-    const Id    = this.props.users.length
+    const Id    = this.props.users.length +1
     const Email  = e.target.email.value
     const Password = e.target.password.value
     const Name   = e.target.username.value
     const Type   = e.target.Dog.checked ? "Dog" : "Walker"
     const Pic    = e.target.Pic.value
     const Bio    = e.target.Bio.value
+    const Phone    = e.target.phone.value
     
     const newUser = {
       Id, 
@@ -26,7 +27,8 @@ class CreateUserContainer extends PureComponent{
       Pic,
       Bio,
       Yes : [],
-      No : []
+      No : [],
+      Phone
     }
 
     this.props.createNewProfile(newUser)

@@ -6,18 +6,22 @@ import { logOut } from '../actions/user-actions'
 class FooterContainer extends PureComponent{
   render(){
 
-    const matchButtonClass = (this.props.location.pathname === '/' || this.props.location.pathname.includes('matches')) 
+    const path = this.props.location.pathname
+
+    const matchButtonClass = (path === '/' || path.includes('matches') || path.includes('new-user')) 
       ? 'd-none' : 'btn'
-    const logoutButtonClass = (this.props.location.pathname === '/') ? 'd-none' : 'btn'
-    const selectorButtonClass = (this.props.location.pathname === '/' || this.props.location.pathname.includes('selector') )
+    const logoutButtonClass = (path === '/' || path.includes('new-user')) ? 'd-none' : 'btn'
+    const selectorButtonClass = (path === '/' || path.includes('selector') || path.includes('new-user') )
     ? 'd-none' : 'btn' ;
+
+    const createProfileButtonClass = (path === '/') ? 'btn btn-primary' : 'd-none'
     
     return (
       <div className="card-footer page-footer"> 
-      
       <Link to={ `/${this.props.currentUser}/matches` }><button className={matchButtonClass}>My matches</button></Link>
       <Link to={`/`}><button className={logoutButtonClass} onClick={() => this.props.logOut()}>logout</button></Link>
       <Link to={`/${this.props.currentUser}/selector`}><button className={selectorButtonClass}>Show Me Profiles</button></Link>
+      <Link to={ `/new-user` }><button className={createProfileButtonClass}>Sign Up</button></Link>
       </div>
     )
   }
