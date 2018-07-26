@@ -13,6 +13,14 @@ class MatchesContainer extends PureComponent {
   }
 
   renderMatches = () => {
+    if(this.props.matches.length === 0){
+      return (
+        <div className="selector_presenter">
+          <img className="selector-container-image img-fluid" src={require('../puppylove.jpg')} alt="no more"/>
+          <h4>You don't have any matches yet, keep looking</h4>
+        </div>
+      )
+    }
     return this.props.matches.map((match)=> {
     return <div key={match.Id} className='col-md-8 matches_container_matches photo-page-container h-25 d-inline-block'>
       <h3>{match.Name}</h3>
