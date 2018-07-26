@@ -1,4 +1,5 @@
 import { SET_MATCHES } from '../actions/setMatches'
+import createNotifications from '../containers/NotificationContainer'
 
 const initialState = JSON.parse(localStorage.getItem('matches')) || [] 
 
@@ -12,8 +13,10 @@ export default (state = initialState, action = {}) => {
         return state
       }
       const matches = users.filter((user)=> currentUser.Yes.includes(user.Id))
-      .filter((user)=> user.Yes.includes(currentUserId) )
+        .filter((user)=> user.Yes.includes(currentUserId) )
       localStorage.setItem('matches', JSON.stringify(matches))
+      if (matches.length >= 1){
+      createNotifications('matched',matches[0].Name)}
       return matches
 
     default:
