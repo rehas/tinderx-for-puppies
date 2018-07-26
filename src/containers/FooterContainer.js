@@ -19,3 +19,5 @@ export default class FooterContainer extends PureComponent{
     )
   }
 }
+
+//connect 

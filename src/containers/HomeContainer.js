@@ -12,9 +12,6 @@ class HomeContainer extends PureComponent {
     userPassword: '',
   }
 
-  componentDidMount(){
-    this.props.getStateFromBrowser()
-  }
 
   handleEvent = () => {
     const validateEmail = this.props.users.filter(user => user.Email === this.state.userEmail)
