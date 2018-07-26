@@ -1,4 +1,6 @@
+
 import {SELECT_USER, LOGOUT_USER} from '../actions/user-actions'
+
 
 const initialState = null
 
@@ -10,6 +12,6 @@ export default (state = initialState, action = {}) => {
     case LOGOUT_USER:
       return initialState
     default:
-      return state 
+      return state
   }
 }
