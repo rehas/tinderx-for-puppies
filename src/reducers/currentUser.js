@@ -7,10 +7,10 @@ export default (state = initialState, action = {}) => {
   switch (action.type) {
 
     case SELECT_USER:
-      const currentUser = users.filter(user => user.Id === action.payload)[0].Id
-      return currentUser
+      return action.payload
 
     default:
+      console.log('default in current user')
       return state 
   }
 }

@@ -12,22 +12,22 @@ import {showNewProfile} from '../actions/profile-actions'
 class SelectorContainer extends React.PureComponent{
   onSwipedLeft = (e, absX) =>{
     this.props.swipeLeft(this.props.currentUser,this.props.shownProfileId)
-    this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId)
+    this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId, this.props.users)
   }
 
   onSwipedRight = (e, absX) => {
     this.props.swipeRight(this.props.currentUser,this.props.shownProfileId)
-    this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId)
+    this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId, this.props.users)
   }
 
    onClickHandler = (event) => {
     if(event.target.id === 'no'){
       this.props.swipeLeft(this.props.currentUser,this.props.shownProfileId)
-      this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId)
+      this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId, this.props.users)
 
    }else{
      this.props.swipeRight(this.props.currentUser,this.props.shownProfileId)
-     this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId)
+     this.props.showNewProfile(this.props.currentUser, this.props.shownProfileId, this.props.users)
     }
   }
 
