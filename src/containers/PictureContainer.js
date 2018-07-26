@@ -1,5 +1,4 @@
 import * as React from 'react'
-// import request from 'superagent'
 import {setProfileUrl} from '../actions/setProfileUrl'
 import { connect } from 'react-redux';
 

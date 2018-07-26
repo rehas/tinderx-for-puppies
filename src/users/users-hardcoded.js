@@ -9,6 +9,7 @@ const users = [
     Bio: "I'm Harold and I really love dogs. I would love to walk them and play and hang out",
     Yes: [],
     No: [],
+    Phone: "+12345678901"
   }, 
   {
     Id: 2,
@@ -20,6 +21,7 @@ const users = [
     Bio: "I enjoy going for runs with dogs. the motivateme to run faster and they enjoy the exercise to",
     Yes: [],
     No: [],
+    Phone: "+12345678901"
   }, 
   {
     Id: 3,
@@ -31,6 +33,7 @@ const users = [
     Bio: "I'm a 3 year old german shepard and very playful like peter pan I never grow up",
     Yes: [1,2],
     No: [],
+    Phone: "+12345678901"
   }, 
   {
     Id: 4,
@@ -42,6 +45,7 @@ const users = [
     Bio: "I'm a pure breed poodle vey intelligent and love a brisk walk",
     Yes: [1],
     No: [],
+    Phone: "+12345678901"
   }, 
   {
     Id: 5,
@@ -53,6 +57,7 @@ const users = [
     Bio: "I'm a 6 year old pug and enjoy playing fetch",
     Yes: [2],
     No: [],
+    Phone: "+12345678901"
   }, 
   {
     Id: 6,
@@ -64,6 +69,7 @@ const users = [
     Bio: "I'm a Bichon Frise and enjoy pats and cuddles",
     Yes: [],
     No: [],
+    Phone: "+12345678901"
   },
   {
     Id: 7,
@@ -75,6 +81,7 @@ const users = [
     Bio: "I'm a choclate Cocker Spaniel that loves everyone sorry but I lick a lot",
     Yes: [],
     No: [],
+    Phone: "+12345678901"
   }, 
   {
     Id: 8,
@@ -86,6 +93,7 @@ const users = [
     Bio: "I'm a golden retreiver that loves catch and frisby",
     Yes: [],
     No: [],
+    Phone: "+12345678901"
   }, 
 ]
 
