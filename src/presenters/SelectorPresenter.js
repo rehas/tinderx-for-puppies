@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-export default function SelectorPresenter(props) {
+export default function SelectorPresenter() {
   return (
     <div className='selector_presenter'>
       <div>
@@ -8,5 +8,5 @@ export default function SelectorPresenter(props) {
         <h4>No more profiles to review right now</h4>
       </div>
     </div>
-)
+  )
 }

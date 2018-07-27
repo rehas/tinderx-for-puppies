@@ -1,10 +1,10 @@
-import React, { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
+import React, { PureComponent } from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { logOut } from '../actions/user-actions'
 
 class FooterContainer extends PureComponent{
-  render(){
+  render() {
 
     const path = this.props.location.pathname
 
