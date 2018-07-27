@@ -13,8 +13,13 @@ export default (state = initialState, action = {}) => {
       if (currentUser === undefined) {
         return state
       }
-      const matches = users.filter((user) => currentUser.Yes.includes(user.Id))
-        .filter((user) => user.Yes.includes(currentUserId))
+      const matches = users
+        .filter((user) => {
+          return (currentUser.Yes.indexOf(user.Id) >=0)
+        } )
+         .filter((user) => {
+          return (user.Yes.indexOf(currentUserId) >= 0)
+          })
       localStorage.setItem('matches', JSON.stringify(matches))
       if (matches.length >= 1 && state.length < matches.length) {
         createNotifications('matched', matches[matches.length - 1].Name)

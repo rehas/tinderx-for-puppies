@@ -7,8 +7,10 @@ export default (state = null, action = {}) => {
     case SHOW_NEW_PROFILE :
         const currentUser = action.payload.users.filter(user => action.payload.userId === user.Id)[0]
         const newProfile = action.payload.users.filter(user => user.Type !== currentUser.Type)
-          .filter(user => !currentUser.Yes.includes( user.Id))
-          .filter(user => !currentUser.No.includes( user.Id))
+          .filter(user => {
+            return (currentUser.Yes.indexOf( user.Id) < 0)
+          })
+          .filter(user => { return (currentUser.No.indexOf( user.Id) < 0)})
           .filter(user => !(user.Id === action.payload.profileId))
 
           if (newProfile.length < 1){
