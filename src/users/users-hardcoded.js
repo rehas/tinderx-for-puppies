@@ -191,6 +191,30 @@ const users = [
       No: [],
       Phone: "145654674389015"
   },
+  {
+    Id: 17,
+      Email: "test17@petpals.com",
+      Password: "pasword",
+      Name: "Rupert",
+      Type: "Dog",
+      Pic: "https://images.pexels.com/photos/132676/pexels-photo-132676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      Bio: "I'm a gentle border collie. I used to work hard on a farm as a sheepdog but I'm retired now",
+      Yes: [1],
+      No: [],
+      Phone: "145654674389015"
+  },
+  {
+    Id: 18,
+      Email: "test18@petpals.com",
+      Password: "pasword",
+      Name: "Killer",
+      Type: "Dog",
+      Pic: "https://images.pexels.com/photos/720678/pexels-photo-720678.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      Bio: "Yes my owners named me ironically... How original and yes I couldn't harm a fly. But I still try ",
+      Yes: [],
+      No: [],
+      Phone: "145654674389015"
+  },
 ]
 
 export default users
