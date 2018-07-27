@@ -4,6 +4,7 @@ import './App.css'
 import { Route } from 'react-router-dom'
 import SelectorContainer from './containers/SelectorContainer'
 import CreateUserContainer from './containers/CreateUserContainer'
+import EditUserContainer from './containers/EditUserContainer'
 import HomeContainer from './containers/HomeContainer'
 import MatchesContainer from './containers/MatchesContainer'
 import FooterContainer from './containers/FooterContainer'
@@ -26,6 +27,7 @@ class App extends Component {
               <Route exact path='/' component={HomeContainer} />
               <Route exact path='/:id/matches' component={MatchesContainer} />
               <Route exact path='/:id/selector' component={SelectorContainer} />
+              <Route exact path='/:id/edit-user' component={EditUserContainer} />
               <Route exact path = '/new-user' component ={CreateUserContainer}  />
              <Route component={(props) => <FooterContainer {...props} extra={"hello"} />}/>
             </div >
