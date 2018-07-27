@@ -16,7 +16,7 @@ class FooterContainer extends PureComponent{
 
     const createProfileButtonClass = (path === '/') ? 'btn btn-primary' : 'd-none'
 
-    const editProfileButtonClass = (path === '/' || path.indexOf('edit-user') >=0) ? 'd-none' : 'btn btn-primary'
+    const editProfileButtonClass = (path === '/' || path.indexOf('edit-user') >=0 || (path.indexOf('new-user') >=0)) ? 'd-none' : 'btn btn-primary'
     
     return (
       <div className="card-footer page-footer"> 
