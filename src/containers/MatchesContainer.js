@@ -38,7 +38,7 @@ class MatchesContainer extends PureComponent {
   }
 
   componentWillMount() {
-    this.props.getCurrentUser() === null && (this.props.history.push(`/`))
+    this.props.currentUserId === null && (this.props.history.push(`/`))
   }
 
   componentDidMount() {
