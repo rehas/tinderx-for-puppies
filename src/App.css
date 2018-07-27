@@ -149,7 +149,9 @@ html,body, .App, #root, main,  .selector-container{
   hr{
     margin-top: 5px;
   }
-
+  .btn, .btn-primary{
+    margin : 0 3px;
+  }
 }
 
 @media only screen and (max-width: 350px){
