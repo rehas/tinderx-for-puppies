@@ -13,7 +13,7 @@ export default (state = initialState, action = {}) => {
     case GET_USER:
       return parseInt(localStorage.getItem('currentUser'),10)
     case LOGOUT_USER:
-      localStorage.setItem('currentUser', JSON.stringify(initialState))
+      localStorage.setItem('currentUser', JSON.stringify(null))
       return null
     default:
       return state
