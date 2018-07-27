@@ -1,4 +1,5 @@
 import {SHOW_NEW_PROFILE} from '../actions/profile-actions'
+import { LOGOUT_USER } from '../actions/user-actions'
 
 export default (state = null, action = {}) => {
   switch (action.type) {
@@ -15,6 +16,8 @@ export default (state = null, action = {}) => {
           }else{
             return newProfile[0].Id
           }
+    case LOGOUT_USER:
+          return null
     default:
       return state 
   }
