@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import HomePresenter from '../presenters/HomePresenter'
 import { setCurrentUser, getStateFromBrowser } from '../actions/user-actions'
-import {showNewProfile} from '../actions/profile-actions'
+import { showNewProfile } from '../actions/profile-actions'
 import createNotifications from './NotificationContainer'
 
 class HomeContainer extends PureComponent {
@@ -12,7 +12,8 @@ class HomeContainer extends PureComponent {
     userPassword: '',
   }
 
-  handleEvent = () => {
+  handleEvent = (e) => {
+    e.preventDefault()
     const validateEmail = this.props.users.filter(user => user.Email === this.state.userEmail)
     const validatePassword = validateEmail.filter(user => user.Password === this.state.userPassword)
     if (validateEmail.length === 1 && validatePassword.length === 1) {
