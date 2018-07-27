@@ -19,7 +19,7 @@ const users = [
     Type: "Walker",
     Pic: "https://images.pexels.com/photos/1109424/pexels-photo-1109424.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     Bio: "I enjoy going for runs with dogs. the motivateme to run faster and they enjoy the exercise to",
-    Yes: [],
+    Yes: [3],
     No: [],
     Phone: "123456789015"
   }, 
@@ -31,7 +31,7 @@ const users = [
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/affenpinscher/n02110627_8714.jpg",
     Bio: "I'm a 3 year old german shepard and very playful like peter pan I never grow up",
-    Yes: [1,2],
+    Yes: [],
     No: [],
     Phone: "123456789015"
   }, 
@@ -55,7 +55,7 @@ const users = [
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/husky/n02110185_5030.jpg",
     Bio: "I'm a 6 year old pug and enjoy playing fetch",
-    Yes: [2],
+    Yes: [],
     No: [],
     Phone: "123456789015"
   }, 
@@ -67,7 +67,7 @@ const users = [
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/weimaraner/n02092339_4410.jpg",
     Bio: "I'm a Bichon Frise and enjoy pats and cuddles",
-    Yes: [],
+    Yes: [1],
     No: [],
     Phone: "123456789015"
   },
@@ -91,26 +91,26 @@ const users = [
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/deerhound-scottish/n02092002_6978.jpg",
     Bio: "I'm a golden retreiver that loves catch and frisby",
-    Yes: [],
+    Yes: [1],
     No: [],
     Phone: "123456789015"
   },
   {
     Id: 9,
     Email: "test9@petpals.com",
-    Password: "99",
+    Password: "pasword",
     Name: "Debby",
     Type: "Walker",
     Pic: "https://images.dog.ceo/breeds/chihuahua/n02085620_1765.jpg",
     Bio: "I'm a lazy lady who loves catch and frisby",
-    Yes: [],
+    Yes: [3],
     No: [],
     Phone: "123456789015"
   },
   {
     Id: 10,
     Email: "test10@petpals.com",
-    Password: "100",
+    Password: "pasword",
     Name: "Paddy",
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/mountain-swiss/n02107574_298.jpg",
@@ -122,7 +122,7 @@ const users = [
   {
     Id: 11,
     Email: "test11@petpals.com",
-    Password: "11",
+    Password: "pasword",
     Name: "Fuzzy",
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/deerhound-scottish/n02092002_6978.jpg",
@@ -134,15 +134,39 @@ const users = [
   {
     Id: 12,
     Email: "test12@petpals.com",
-    Password: "12",
-    Name: "Fizzy",
+    Password: "pasword",
+    Name: "Beauty",
     Type: "Dog",
     Pic: "https://images.dog.ceo/breeds/vizsla/n02100583_12358.jpg",
-    Bio: "I'm just a simple dog",
-    Yes: [],
+    Bio: "I'm just a simple dog from a small town in Idaho",
+    Yes: [1],
     No: [],
     Phone: "123456789015"
-  }, 
+  },
+  {
+  Id: 13,
+    Email: "test13@petpals.com",
+    Password: "pasword",
+    Name: "Michelle",
+    Type: "Walker",
+    Pic: "https://images.pexels.com/photos/1139793/pexels-photo-1139793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    Bio: "I live in an skyscraaper so can't have a dog but love them so much I need to hang out with other peoples",
+    Yes: [],
+    No: [],
+    Phone: "889056789015"
+  },
+  {
+    Id: 14,
+      Email: "test14@petpals.com",
+      Password: "pasword",
+      Name: "Steven",
+      Type: "Walker",
+      Pic: "https://images.pexels.com/photos/1143371/pexels-photo-1143371.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      Bio: "animals enrich our lives and because theres are so short we should cherish every minute we have with them",
+      Yes: [3],
+      No: [],
+      Phone: "123454389015"
+  },
 ]
 
 export default users
