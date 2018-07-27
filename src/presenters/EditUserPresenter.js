@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function EditUserPresenter(props){
   const cu = props.currentUserObject
-  const isDog = props.currentUserObject.type === 'Dog'
+  const isDog = props.currentUserObject.Type === 'Dog'
   return(
     <div className='user-type-page'>
     <form onSubmit={props.onSubmitHandler}>

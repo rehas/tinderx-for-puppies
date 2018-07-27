@@ -39,11 +39,13 @@ class EditUserContainer extends PureComponent{
     // this.props.history.push(`/${Id}/selector`)
 
   }
+  componentWillMount(){
+    this.props.currentUserId === null && this.props.history.push(`/`)
+  }
   
   render(){
-    // console.log(this.props.currentUserId)
-    // console.log(this.props.users)
-    console.log(this.currentUser)
+    if (this.props.currentUserId === null) { this.props.history.push(`/`) 
+    return null}
     return(
       <EditUserPresenter 
       onSubmitHandler = {this.handleSubmit}

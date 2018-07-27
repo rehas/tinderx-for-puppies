@@ -43,6 +43,8 @@ export default (state = initialState, action = {}) => {
           return editedUser
         }
       })
+      localStorage.setItem('users', JSON.stringify(newStateForEditedProfile))
+
       return newStateForEditedProfile
 
 
