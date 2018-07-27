@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import EditUserPresenter from '../presenters/EditUserPresenter';
-import {createNewProfile} from '../actions/profile-actions'
+import {createNewProfile, UpdateProfile} from '../actions/profile-actions'
 import {setCurrentUser} from '../actions/user-actions'
 
 class EditUserContainer extends PureComponent{
@@ -14,7 +14,7 @@ class EditUserContainer extends PureComponent{
     
     const Id    = this.props.currentUserId
     const Email  = e.target.email.value
-    const Password = e.target.password.value
+    // const Password = e.target.password.value
     const Name   = e.target.username.value
     const Type   = e.target.Dog.checked ? "Dog" : "Walker"
     const Pic    = e.target.Pic.value
@@ -34,9 +34,9 @@ class EditUserContainer extends PureComponent{
       Phone
     }
 
-    // this.props.createNewProfile(newUser)
+    this.props.UpdateProfile(newUser)
     this.props.setCurrentUser(Id);
-    this.props.history.push(`/${Id}/selector`)
+    // this.props.history.push(`/${Id}/selector`)
 
   }
   
@@ -62,6 +62,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   createNewProfile : createNewProfile,
+  UpdateProfile : UpdateProfile,
   setCurrentUser :setCurrentUser
 }
 

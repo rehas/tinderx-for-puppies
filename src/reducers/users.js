@@ -35,9 +35,17 @@ export default (state = initialState, action = {}) => {
 
     case UPDATE_PROFILE:
       //return [...state][action.payload.Id-1] = action.payload;
-      const currentUser = state.filter(user => user.Id === action.payload.Id)[0]
-      const userIndex = state.indexOf(currentUser)
-      return [...state][currentUser] = action.payload;
+      const editedUser = action.payload
+      const newStateForEditedProfile = state.map(x => {
+        if (x.Id !== editedUser.Id){
+          return x
+        }else{
+          return editedUser
+        }
+      })
+      return newStateForEditedProfile
+
+
 
     default:
       return state
