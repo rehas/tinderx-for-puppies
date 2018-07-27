@@ -20,7 +20,7 @@ class FooterContainer extends PureComponent{
       <div className="card-footer page-footer"> 
       <Link to={ `/${this.props.currentUser}/matches` }><button className={matchButtonClass}>My matches</button></Link>
       <Link to={`/${this.props.currentUser}/selector`}><button className={selectorButtonClass}>Profiles</button></Link>
-      <Link to={`/`}><button className={logoutButtonClass} onClick={() => this.props.logOut()}>logout</button></Link>
+      <Link to={`/`}><button className={logoutButtonClass} onClick={() => this.props.logOut()}>Log out</button></Link>
       <Link to={ `/new-user` }><button className={createProfileButtonClass}>Sign Up</button></Link>
       </div>
     )
