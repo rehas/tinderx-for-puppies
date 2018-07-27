@@ -11,7 +11,7 @@ class MatchesContainer extends PureComponent {
   renderMatches = () => {
     if(this.props.matches.length === 0){
       return (
-        <div className="selector_presenter">
+        <div className="selector_presenter matches-box">
         <div>
           <img className="selector-container-image img-fluid" src={require('../puppylove.jpg')} alt="no more"/>
           <h4>You don't have any matches yet, keep looking</h4>
@@ -22,12 +22,12 @@ class MatchesContainer extends PureComponent {
     return this.props.matches.map((match) => { 
       return (
       <div key={match.Id} className='col-md-10 matches_container_matches photo-page-container h-25 d-inline-block'>
-      <h3>{match.Name}</h3>
-      <a href={`mailto:${match.Email}`}>
-      <p>{ match.Email}</p>
-      </a>
+      <h4 className="matches-name">{match.Name}</h4>
+      {/* <a href={`mailto:${match.Email}`}>
+      <div className="matches-email">{ match.Email}</div>
+      </a> */}
       <a href={`https://api.whatsapp.com/send?phone=${match.Phone}`}>
-      <p>{ match.Phone}</p>
+      <div className="matches-phone">{ match.Phone}</div>
       </a>
       <img className="matches_container_matches-image img-fluid selector-container-image" src={match.Pic} alt={match.Name}/>
       <div className="user-bio-container text-justify border border-secondary rounded h-40 d-inline-block">
