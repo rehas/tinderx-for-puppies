@@ -30,7 +30,7 @@ const users = [
     Name: "Spike",
     Type: "Dog",
     Pic: "https://images.pexels.com/photos/350428/pexels-photo-350428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    Bio: "I'm a 3 year old german shepard and very playful like peter pan I never grow up",
+    Bio: "I'm a 3 year old german shepard and very playful like peter pan I never grow up. Lets Play",
     Yes: [],
     No: [],
     Phone: "123456789015"
@@ -42,7 +42,7 @@ const users = [
     Name: "Princess",
     Type: "Dog",
     Pic: "https://images.pexels.com/photos/951324/pexels-photo-951324.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    Bio: "I'm a pure breed poodle vey intelligent and love a brisk walk",
+    Bio: "I'm a pure breed poodle vey intelligent and love a brisk walk to keep my splendid figure",
     Yes: [1],
     No: [],
     Phone: "123456789015"
@@ -54,7 +54,7 @@ const users = [
     Name: "Rex",
     Type: "Dog",
     Pic: "https://images.pexels.com/photos/134392/pexels-photo-134392.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    Bio: "I'm a 6 year old pug and enjoy playing fetch",
+    Bio: "I'm a 6 year old pug and enjoy long care rides even if we go around in circles. Nothing beats the wind in your face",
     Yes: [],
     No: [],
     Phone: "123456789015"
@@ -66,7 +66,7 @@ const users = [
     Name: "Fluffy",
     Type: "Dog",
     Pic: "https://images.pexels.com/photos/981062/pexels-photo-981062.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    Bio: "I'm a Bichon Frise and enjoy pats and cuddles",
+    Bio: "I'm a Bichon Frise and enjoy pats and cuddles I am very affectionate",
     Yes: [1],
     No: [],
     Phone: "123456789015"
@@ -78,7 +78,7 @@ const users = [
     Name: "Ralph",
     Type: "Dog",
     Pic: "https://images.pexels.com/photos/5018/animal-dog-pet-brown.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    Bio: "I'm a choclate lab that loves everyone sorry but I lick a lot",
+    Bio: "I'm a choclate lab that loves everyone sorry but I lick a lot I'm just showing affection",
     Yes: [],
     No: [],
     Phone: "123456789015"
@@ -90,7 +90,7 @@ const users = [
     Name: "Abby",
     Type: "Dog",
     Pic: "https://images.pexels.com/photos/9080/night-garden-yellow-animal.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    Bio: "I'm a golden retreiver that loves catch and frisby",
+    Bio: "I'm a golden retreiver that loves catch and frisby. I have serious catching skills, watch me fly!",
     Yes: [1],
     No: [],
     Phone: "123456789015"
@@ -102,7 +102,7 @@ const users = [
     Name: "Debby",
     Type: "Walker",
     Pic: "https://images.pexels.com/photos/1198869/pexels-photo-1198869.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    Bio: "I'm a friendly person who enjoys the company of dogs more than people",
+    Bio: "I'm a not so friendly person who enjoys the company of dogs more than people because they are more honest",
     Yes: [3],
     No: [],
     Phone: "123456789015"
@@ -114,7 +114,7 @@ const users = [
     Name: "Paddy",
     Type: "Dog",
     Pic: "https://images.pexels.com/photos/356378/pexels-photo-356378.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    Bio: "I'm a silly billy that loves catch and chasing games",
+    Bio: "I'm a silly billy that loves chasing games but I don't know wht to do when I cath things????",
     Yes: [],
     No: [],
     Phone: "123456789015"
@@ -126,7 +126,7 @@ const users = [
     Name: "Fuzzy",
     Type: "Dog",
     Pic: "https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    Bio: "I just want to follow humans everywhere... I mean EVERYWHERE!",
+    Bio: "I just want to follow humans everywhere... I mean EVERYWHERE! that's where the action is",
     Yes: [],
     No: [],
     Phone: "123456789015"
@@ -138,7 +138,7 @@ const users = [
     Name: "Beauty",
     Type: "Dog",
     Pic: "https://images.pexels.com/photos/57708/dog-bernese-mountain-dog-berner-senner-dog-57708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    Bio: "I'm just a simple dog from a small town in Idaho",
+    Bio: "I'm just a simple dog from a small town in Idaho who wears his heart on his sleeve",
     Yes: [1],
     No: [],
     Phone: "123456789015"
@@ -174,7 +174,19 @@ const users = [
       Name: "Walter & Susan",
       Type: "Walker",
       Pic: "https://images.pexels.com/photos/374845/pexels-photo-374845.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      Bio: "animals enrich our lives and because theres are so short we should cherish every minute we have with them",
+      Bio: "We enjoy long walks together with our pet pals and yours are more than welcome to join to!",
+      Yes: [],
+      No: [],
+      Phone: "145654674389015"
+  },
+  {
+    Id: 16,
+      Email: "test16@petpals.com",
+      Password: "pasword",
+      Name: "Poppy",
+      Type: "Dog",
+      Pic: "https://images.pexels.com/photos/58997/pexels-photo-58997.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      Bio: "I have Heterochromia iridum so naturally I get all the looks and pats. I'm pretty awesome",
       Yes: [],
       No: [],
       Phone: "145654674389015"
