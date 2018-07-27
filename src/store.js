@@ -6,8 +6,8 @@ const store = createStore(
   reducer,
   compose(
     applyMiddleware(ReduxThunk),
-    window.navigator.userAgent.includes('Chrome') ?
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() : compose,
+    (window.navigator.userAgent.indexOf('Android') >= 0 || window.navigator.userAgent.includes('iPhone') ) ?
+    compose :window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() ,
   ),
 );
 
