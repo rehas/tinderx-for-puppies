@@ -21,8 +21,8 @@ export default (state = initialState, action = {}) => {
       }
       return matches
     case LOGOUT_USER:
-      localStorage.setItem('matches', JSON.stringify(null))
-      return null
+      localStorage.setItem('matches', JSON.stringify([]))
+      return []
     default:
       return state
   }
